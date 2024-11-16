@@ -1,0 +1,108 @@
+---
+
+const title = "William & Heidy";
+const title2 = "W & H"
+const date = "December 7, 2024";
+const location = " Choloma, Honduras";
+const menuItems = ["Home", "Our Story", "Photos", "RSV"];
+
+function toggleMenu(){
+    const menu = document.getElementById('mobileMenu');
+    menu?.classList.toggle('open');
+}
+---
+
+<section class="wedding-section">
+    <div class="content mt-60">
+        <div class="">
+            <h2 class="title2">{title2}</h2>
+        </div>
+        
+        
+        <h1 class="title">{title}</h1>
+        <p class="p-2">{date} · {location}</p>
+        <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
+        <!-- Menú de navegación -->
+        <nav class="menu" id="mobileMenu">
+            {menuItems.map((item) => (
+                <a href="#">{item}</a>
+            ))}
+        </nav>
+    </div>
+</section>
+    <div class="w-full flex justify-center">
+        <img src="s.jpg" alt="" class="w-full m-auto h-auto block p-8">
+    </div>
+
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+    .wedding-section{
+        background-image: url(fondo-flores.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .wedding-image img{
+        width: 100%;
+        max-width: 800px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .content {
+        background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semi-transparente */
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 55px;
+        color: #656768;
+        Font-family: 'Libre Baskerville', serif;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+    }
+    p {
+        font-size: 1.2rem;
+        color: #656768;
+        font-family: "Montserrat", sans-serif;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin: 8px 0;
+        font-weight: 400;
+    }
+    nav {
+        margin-top: 50px;
+    }
+    nav a {
+        margin: 0 15px;
+        font-size: 1.2rem;
+        text-decoration: none;
+        color: #656768;
+        border-bottom: 1px solid transparent;
+        padding-bottom: 5px;
+        Font-family: 'Libre Baskerville', serif;
+        font-style: italic;
+        letter-spacing: 2px;
+        line-height: 1;
+    }
+
+    nav a:hover {
+        border-bottom: 1px solid #555;
+    }
+
+
+
+</style>
