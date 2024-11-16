@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro"
+
+import { title } from "../hooks/weddingDate";
+import { events } from "../hooks/TextPhotos";
+---
+
+<Layout title="">
+
+    <Header title="Photos" />
+    <section>
+        <div class="flex flex-col items-center text-[#656768]">
+            <div class="bg-no-repeat bg-center bg-contain flex flex-col items-center w-full h-full">
+                <img src="fondo-flores2.webp" alt="" class="w-full m-auto h-auto block">             
+            </div>
+            
+            <div class="flex flex-col items-center">
+                <h1 class="text-6xl text-center font-serif pb-5" >{title}</h1>
+            </div>
+
+            <div class="relative border-l-2 border-dotted font-sans italic border-gray-300">
+                {events.map((event, index) => (
+                  <div
+                    class={`flex flex-col-reverse md:flex ${
+                      index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                    } items-center mb-8 relative`}
+                  >
+                    <div class="w-full md:w-1/2 text-center px-4">
+                      <p class="text-gray-600 text-sm md:text-base px-2">{event.text}</p>
+                    </div>
+                    
+                    <div class="w-full md:w-1/2 p-4">
+                      <img
+                        src={event.image}
+                        alt={event.alt}
+                        class="rounded-lg shadow-md w-full h-auto"
+                      />
+                    </div>
+                    
+                    <div class="absolute bg-gray-800 w-4 h-4 rounded-full top-1/2 transform -translate-y-1/2 -left-2"></div>
+                  </div>
+                ))}
+              </div>
+              
+
+        </div>
+
+    </section>
+
+</Layout>
