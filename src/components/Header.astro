@@ -1,0 +1,35 @@
+---
+import MenuIcon from "../components/icons/Menu.astro"
+import CloseIcon from "../components/icons/close.astro"
+
+const { title } = Astro.props
+---
+
+<header class="fixed top-0 left-0 w-full py-2 z-50 bg-white shadow-md lg:px-0">
+    <div class="relative flex items-center justify-between px-2">
+        <a href="#header-menu" class="md:hidden"> <MenuIcon /></a>
+        <a href="/" class="text-[27px] text-[#656768] tracking-[3px] font-normal font-serif uppercase absolute left-1/2 transform -translate-x-1/2" >
+            {title}
+        </a>
+        
+        <nav
+            id="header-menu" 
+            class="fixed w-full h-screen inset-0 bg-[#151a36]/90 text-white md:text-xl flex flex-col items-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:bg-transparent md:h-auto md:flex-row md:translate-y-0 md:text-black" >
+            <a href="#" class="self-end mr-8 mt-4 md:hidden">
+                <CloseIcon />
+              </a>
+            <ul class="flex flex-col items-center gap-4 text-lg italic md:flex-row md:gap-8">
+                <li>
+                    <a class="hover:border-b-2 hover:border-white" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="hover:border-b-2 hover:border-white" href="/OurStory">Our Story</a>
+                </li>
+                <li>
+                    <a class="hover:border-b-2 hover:border-white" href="#">Photos</a>
+                </li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>

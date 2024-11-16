@@ -1,0 +1,27 @@
+---
+import Header from "../components/Header.astro";
+import { title, date, place, city } from "../hooks/weddingDate"
+const menuItems = ["Home", "Our Story", "Photos", "RSV"];
+
+
+--- 
+
+<Header title="W&H" />
+<section class="block lg:hidden">
+    <div class="flex flex-col text-[#656768] ">
+        <div class="w-full flex justify-center">
+            <img src="s.jpg" alt="" class="w-full m-auto h-auto block">
+        </div>
+        <div class="bg-no-repeat bg-center bg-contain flex flex-col items-center w-full h-full">
+            <img src="fondo-flores2.webp" alt="" class="w-full m-auto h-auto block">             
+            
+        </div>
+        <div class="flex flex-col items-center">
+            <h1 class="text-6xl text-center font-serif" >{title}</h1>
+            <p class="pt-8 text-base font-sans font-normal uppercase tracking-[3px]">{date} · {place}</p>
+            <p class=" text-base font-sans font-normal uppercase tracking-[3px] pb-8">{city}</p>
+        </div> 
+    </div>
+</section>
+
+
