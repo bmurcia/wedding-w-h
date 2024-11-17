@@ -28,6 +28,21 @@ export const events = [
         text: "Celebramos nuestro aniversario juntos ♥️22.06.2023- 22.06.2024♥️",
         image:"/pagePhotos_6.jpg",
         alt:"Foto de William y Heidy en la naturaleza"
+    },
+    {
+        text: "Más de nuestras fotos Pre-boda 🤍",
+        image:"/pagePhotos_7.jpg",
+        alt:"Fotos pre-boda"
+    },
+    {
+        text: "Más de nuestras fotos Pre-boda 🤍",
+        image:"/pagePhotos_8.jpg",
+        alt:"Fotos pre-boda"
+    },
+    {
+        text: "Más de nuestras fotos Pre-boda 🤍",
+        image:"/pagePhotos_9.jpg",
+        alt:"Fotos pre-boda"
     }
     
 
